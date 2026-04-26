@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPS Community</title>
+
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/SR3NbGvC/Gemini-Generated-Image-1si9y31si9y31si9-removebg-preview.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Playfair Display, sans-serif;
+      color: #e8f0ff;
+
+      background-image: url("https://i.postimg.cc/gkRkmSTw/weic2205a.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 3;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 32px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #cfe2ff;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #4da3ff;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(77, 163, 255, 0.6);
+    }
+
+    /* FIXED SUBTITLE */
+    .subtitle {
+      width: min(1000px, 90%);
+      margin-top: 15px;
+      color: #c7d6f5;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* BUTTONS (IMPORTANT FIX) */
+    .btn-group {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      background: rgba(77, 163, 255, 0.15);
+      border: 1px solid rgba(77, 163, 255, 0.6);
+      border-radius: 10px;
+      color: #e8f0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: rgba(77, 163, 255, 0.3);
+    }
+
+    /* FOOTER */
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #8aa0c7;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="https://i.postimg.cc/SR3NbGvC/Gemini-Generated-Image-1si9y31si9y31si9-removebg-preview.png">
+    <div class="logo-text">ALPS COMMUNITY</div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#">Mission</a>
+    <a href="contest-collections.html">Contests</a>
+    <a href="#">Learn</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main class="hero">
+
+  <h1>ALPS COMMUNITY</h1>
+
+  <p class="subtitle">
+    The Astronomy Learning and Problem Solving Community is a platform dedicated to curating comprehensive contest archives and providing essential learning resources for students throughout their Olympiad journey based on our learnings throughout our beautiful olympiad days in the recent years.
+  </p>
+
+  <div class="btn-group">
+    <a href="contest-collections.html" class="btn">Contest Collections</a>
+    <a href="notes.html" class="btn">Learning Materials</a>
+  </div>
+
+</main>
+
+<footer class="footer">
+  Built for Astronomy and Astrophysics Olympiad Training • The ALPS Project
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contest Collections | ALPS Community</title>
+
+<link rel="icon" type="image/png" href="https://i.postimg.cc/SR3NbGvC/Gemini-Generated-Image-1si9y31si9y31si9-removebg-preview.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family: "Playfair Display", serif;
+  color:#eaf2ff;
+  background:url("https://i.postimg.cc/gkRkmSTw/weic2205a.jpg") center/cover fixed no-repeat;
+  min-height:100vh;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: radial-gradient(circle at top, rgba(0,70,140,0.35), rgba(0,0,0,0.9));
+  z-index:1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:18px 50px;
+  z-index:3;
+}
+
+.logo-container{display:flex;align-items:center;gap:10px;}
+.logo-container img{height:32px;}
+.logo-text{font-weight:700;letter-spacing:2px;font-size:15px;}
+
+.nav-links{display:flex;gap:18px;}
+.nav-links a{text-decoration:none;color:#cfe2ff;font-size:14px;}
+.nav-links a:hover{color:#4da3ff;}
+
+/* ================= CONTAINER ================= */
+.container{
+  position:relative;
+  z-index:2;
+  max-width:1100px;
+  margin:120px auto;
+  padding:0 20px;
+}
+
+.title{font-size:52px;}
+.subtitle{
+  font-family:Poppins;
+  margin:10px 0 25px;
+  color:#bcd6ff;
+  line-height:1.6;
+}
+
+/* ================= SEARCH ================= */
+.search-box{margin-bottom:18px;}
+
+.search-box input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(120,180,255,0.3);
+  background:rgba(10,20,40,0.5);
+  color:#fff;
+  font-size:14px;
+  outline:none;
+}
+
+/* ================= FILTERS ================= */
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.filters button{
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid rgba(120,180,255,0.3);
+  background:rgba(10,20,40,0.4);
+  color:#cfe2ff;
+  cursor:pointer;
+}
+
+.filters button:hover{
+  border-color:#4da3ff;
+  color:#fff;
+}
+
+/* ================= SECTION ================= */
+.section{margin-bottom:40px;}
+
+.section h2{
+  font-family:Playfair Display;
+  font-size:26px;
+  margin-bottom:12px;
+  border-bottom:1px solid rgba(120,180,255,0.25);
+  padding-bottom:6px;
+}
+
+/* ================= INTERNATIONAL — BLUE SCI-FI STYLE ================= */
+
+.research-initiative-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* CARD */
+.research-box{
+    background: rgba(10, 18, 40, 0.72);
+    border: 1px solid rgba(80, 160, 255, 0.18);
+    border-radius: 18px;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    transition: all 0.35s ease;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+}
+
+/* hover blue glow */
+.research-box:hover{
+    transform: translateY(-10px);
+    border-color: #4da3ff;
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.7),
+        0 0 25px rgba(77,163,255,0.25);
+}
+
+/* IMAGE AREA */
+.box-image-wrap{
+    width:100%;
+    height:180px;
+    overflow:hidden;
+    border-bottom:1px solid rgba(80,160,255,0.15);
+}
+
+.box-image-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: transform 0.5s ease;
+}
+
+.research-box:hover .box-image-wrap img{
+    transform: scale(1.08);
+}
+
+/* CONTENT */
+.box-content{
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* TITLE */
+.box-content h3{
+    font-family:Playfair Display;
+    font-weight:800;
+    font-size:18px;
+    letter-spacing:1px;
+    color:#d6eaff;
+}
+
+/* DESCRIPTION */
+.box-content p{
+    font-family:Inter;
+    font-size:13px;
+    color:#b8d4ff;
+    line-height:1.5;
+}
+
+/* TAG */
+.box-tag{
+    display:inline-block;
+    width:fit-content;
+
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:999px;
+
+    background: rgba(77,163,255,0.12);
+    border:1px solid rgba(77,163,255,0.25);
+    color:#8fc7ff;
+}
+
+/* ================= NATIONAL ================= */
+.nation{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+
+  padding:14px 14px;
+  border-left:3px solid #4da3ff;
+  background:rgba(10,20,40,0.4);
+  margin-bottom:10px;
+  border-radius:10px;
+
+  transition:0.25s ease;
+}
+
+.nation:hover{
+  transform:translateX(6px);
+  background:rgba(20,60,120,0.25);
+}
+
+.nation .top-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.olymp-name{
+  font-family:Inter;
+  font-weight:800;
+  letter-spacing:1px;
+  font-size:16px;
+}
+
+.grad-blue{
+  background: linear-gradient(90deg, #4da3ff, #ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nation small{
+  margin-left:28px;
+  font-family:Inter;
+  font-size:12px;
+  color:#c0dcff;
+  line-height:1.4;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#7aa3d6;
+  padding:40px 10px;
+}
+
+.hidden{display:none;}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="https://i.postimg.cc/SR3NbGvC/Gemini-Generated-Image-1si9y31si9y31si9-removebg-preview.png">
+    <div class="logo-text">ALPS COMMUNITY</div>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Contests</a>
+    <a href="#">Learn</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="title">Contest Collections</div>
+  <div class="subtitle">Here, we aim to compile a comprehensive database of international, national, regional, and other online astronomy and astrophysics Olympiads, since astronomy-related problems are often scattered across multiple sources. Additionally, the “Others” section includes astronomy-related problems that have appeared in physics Olympiads such as IPhO, APhO, and various Physics Brawl competitions. Happy problem solving!</div>
+
+  <div class="search-box">
+    <input id="search" placeholder="Search Olympiad (e.g. IOAA, USAAAO, Bangladesh...)" />
+  </div>
+
+  <div class="filters">
+    <button onclick="filterAll()">All</button>
+    <button onclick="filterType('intl')">International</button>
+    <button onclick="filterType('nat')">National</button>
+    <button onclick="filterType('reg')">Regional</button>
+    <button onclick="filterType('others')">Others</button>
+  </div>
+
+<!-- INTERNATIONAL -->
+<div class="section" data-type="intl">
+  <h2>International Contests</h2>
+
+  <div class="research-initiative-grid">
+
+    <div class="research-box search-item" data-name="ioaa astronomy astrophysics">
+      <div class="box-image-wrap">
+        <img src="https://i.postimg.cc/xC6K1FJC/ioaa-logo.jpg">
+      </div>
+      <div class="box-content">
+        <h3>IOAA</h3>
+        <p>International Olympiad on Astronomy & Astrophysics.</p>
+      </div>
+    </div>
+
+    <div class="research-box search-item" data-name="owao astronomy">
+      <div class="box-image-wrap">
+        <img src="https://i.postimg.cc/CxCnK69h/owao-logo.jpg">
+      </div>
+      <div class="box-content">
+        <h3>OWAO</h3>
+        <p>Open World Astronomy Olympiad.</p>
+      </div>
+    </div>
+
+    <div class="research-box search-item" data-name="gecaa astronomy">
+      <div class="box-image-wrap">
+        <img src="https://i.postimg.cc/pVwD95VQ/gecaa-logo.webp">
+      </div>
+      <div class="box-content">
+        <h3>GeCAA</h3>
+        <p>Global e-Competition on Astronomy & Astrophysics.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NATIONAL -->
+<div class="section" data-type="nat">
+  <h2>National Olympiads</h2>
+
+  <div class="national-grid">
+
+    <div class="nation search-item" data-name="armenia astronomy olympiad">
+      <div class="top-row">🇦🇲 <span class="olymp-name grad-blue">Armenia</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="austria astronomy olympiad">
+      <div class="top-row">🇦🇹 <span class="olymp-name grad-blue">Austria</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="bangladesh bdoaa olympiad astronomy astrophysics">
+      <div class="top-row">🇧🇩 <span class="olymp-name grad-blue">BDOAA</span></div>
+      <small>Bangladesh Olympiad on Astronomy and Astrophysics</small>
+    </div>
+
+    <div class="nation search-item" data-name="brazil astronomy olympiad">
+      <div class="top-row">🇧🇷 <span class="olymp-name grad-blue">Brazil</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="caao canada astronomy olympiad astrophysics">
+      <div class="top-row">🇨🇦 <span class="olymp-name grad-blue">CAAO</span></div>
+      <small>Canadian Astronomy and Astrophysics Olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="czech republic astronomy olympiad">
+      <div class="top-row">🇨🇿 <span class="olymp-name grad-blue">Czech Republic</span></div>
+      <small>Astronomy olympiad archive</small>
+    </div>
+
+    <div class="nation search-item" data-name="estonia astronomy olympiad">
+      <div class="top-row">🇪🇪 <span class="olymp-name grad-blue">Estonia</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="germany astronomy olympiad">
+      <div class="top-row">🇩🇪 <span class="olymp-name grad-blue">Germany</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="india inao astronomy olympiad national">
+      <div class="top-row">🇮🇳 <span class="olymp-name grad-blue">INAO</span></div>
+      <small>India National Astronomy Olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="iran astronomy olympiad">
+      <div class="top-row">🇮🇷 <span class="olymp-name grad-blue">Iran</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="latvia astronomy olympiad">
+      <div class="top-row">🇱🇻 <span class="olymp-name grad-blue">Latvia</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="myao malaysia astronomy olympiad">
+      <div class="top-row">🇲🇾 <span class="olymp-name grad-blue">MyAO</span></div>
+      <small>Malaysian Astronomy Olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="nepal astronomy olympiad">
+      <div class="top-row">🇳🇵 <span class="olymp-name grad-blue">Nepal</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="new zealand astronomy olympiad">
+      <div class="top-row">🇳🇿 <span class="olymp-name grad-blue">New Zealand</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="poland astronomy olympiad">
+      <div class="top-row">🇵🇱 <span class="olymp-name grad-blue">Poland</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="romania astronomy olympiad">
+      <div class="top-row">🇷🇴 <span class="olymp-name grad-blue">Romania</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="russia astronomy olympiad national">
+      <div class="top-row">🇷🇺 <span class="olymp-name grad-blue">Russia</span></div>
+      <small>Russian astronomy olympiad database</small>
+    </div>
+
+    <div class="nation search-item" data-name="singapore astronomy olympiad">
+      <div class="top-row">🇸🇬 <span class="olymp-name grad-blue">Singapore</span></div>
+      <small>National astronomy olympiad system</small>
+    </div>
+
+    <div class="nation search-item" data-name="slovenia astronomy olympiad">
+      <div class="top-row">🇸🇮 <span class="olymp-name grad-blue">Slovenia</span></div>
+      <small>Astronomy olympiad archive</small>
+    </div>
+
+    <div class="nation search-item" data-name="sri lanka astronomy olympiad">
+      <div class="top-row">🇱🇰 <span class="olymp-name grad-blue">Sri Lanka</span></div>
+      <small>National astronomy competition</small>
+    </div>
+
+    <div class="nation search-item" data-name="sweden astronomy olympiad">
+      <div class="top-row">🇸🇪 <span class="olymp-name grad-blue">Sweden</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="turkey astronomy olympiad">
+      <div class="top-row">🇹🇷 <span class="olymp-name grad-blue">Turkey</span></div>
+      <small>National astronomy olympiad</small>
+    </div>
+
+    <div class="nation search-item" data-name="ukraine caao astronomy olympiad">
+      <div class="top-row">🇺🇦 <span class="olymp-name grad-blue">Ukraine</span></div>
+      <small>CAAO national competition archive</small>
+    </div>
+
+    <div class="nation search-item" data-name="united kingdom uk astronomy bpho olympiad">
+      <div class="top-row">🇬🇧 <span class="olymp-name grad-blue">United Kingdom</span></div>
+      <small>BPhO astronomy division problem sets</small>
+    </div>
+
+    <div class="nation search-item" data-name="usaaao usa olympiad astronomy astrophysics">
+      <div class="top-row">🇺🇸 <span class="olymp-name grad-blue">USAAAO</span></div>
+      <small>USA Olympiad on Astronomy and Astrophysics</small>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">Built for Astronomy and Astrophysics Olympiad Training • The ALPS Project</div>
+
+<script>
+const search = document.getElementById("search");
+
+search.addEventListener("input", function(){
+  let value = this.value.toLowerCase();
+  document.querySelectorAll(".search-item").forEach(el=>{
+    el.style.display = el.dataset.name.toLowerCase().includes(value) ? "" : "none";
+  });
+});
+
+function filterType(type){
+  document.querySelectorAll(".section").forEach(sec=>{
+    sec.style.display = sec.dataset.type === type ? "block" : "none";
+  });
+}
+
+function filterAll(){
+  document.querySelectorAll(".section").forEach(sec=>{
+    sec.style.display = "block";
+  });
+}
+</script>
+
+</body>
+</html>
